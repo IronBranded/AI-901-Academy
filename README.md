@@ -2,7 +2,11 @@
 
 A single-page study guide for **Microsoft Exam AI-901: Microsoft Azure AI Fundamentals**, built against the skills outline dated **April 15, 2026**.
 
-Open `index.html` in a browser, or view it on GitHub Pages. No build step, no dependencies, no network calls.
+<h3 align="center">
+  <a href="https://ironbranded.github.io/AI-901-Academy/" target="_blank" rel="noopener noreferrer">
+    🟢 TRY THE ACADEMY🟢
+  </a>
+</h3>
 
 ## What is in it
 
