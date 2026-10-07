@@ -121,6 +121,9 @@ body {
 .content {
   min-width: 0;
   padding: var(--s-6) var(--s-6) var(--s-8);
+  /* Long unbroken strings (file names with underscores, URLs, SDK class names)
+     break only when they would otherwise run past the edge of a phone screen. */
+  overflow-wrap: break-word;
 }
 
 .content:focus { outline: none; }

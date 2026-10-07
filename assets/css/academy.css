@@ -275,7 +275,8 @@ textarea.ex__in { font-family: var(--face-mono); font-size: var(--t-xs); line-he
 .hz__lvl[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
 .hz__panel { margin-top: var(--s-3); }
 .hz__panel h4 { margin: 0 0 var(--s-2); font-family: var(--face-ui); }
-.pk label { display: grid; gap: 4px; font-size: var(--t-sm); }
+.pk label { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; font-size: var(--t-sm); }
+.pk select { max-width: 100%; }
 .pk__res { margin-top: var(--s-2); }
 
 /* ---------------- dashboard ---------------- */
@@ -307,13 +308,18 @@ textarea.ex__in { font-family: var(--face-mono); font-size: var(--t-xs); line-he
 .content > .duo { max-width: none; }
 
 /* ---------------- Module 0 index ---------------- */
-.flist { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-2); }
+/* Both grids get an explicit minmax(0, 1fr) column: an implicit grid column is `auto`,
+   which grows to fit the widest unbreakable content and pushes the page past the
+   screen edge on phones. */
+.flist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-2); }
 .fcard { display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: var(--s-3); padding: var(--s-3) var(--s-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper-raise); text-decoration: none; color: var(--ink); }
 .fcard:hover { border-color: var(--accent); }
 .fcard__id { font-family: var(--face-mono); font-size: var(--t-xs); color: var(--ink-faint); padding-top: 3px; }
-.fcard__b { display: grid; gap: 4px; }
+.fcard__b { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; min-width: 0; overflow-wrap: break-word; }
 .fcard__o { font-size: var(--t-sm); color: var(--ink-soft); }
 .fcard__m { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+/* "Supports 1.1.1, 1.1.2, ... 1.1.6" is longer than a phone card is wide, so here the chip wraps. */
+.fcard__m .scope { white-space: normal; }
 
 /* ---------------- objectives map ---------------- */
 .omap { max-width: none !important; }

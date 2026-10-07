@@ -255,9 +255,13 @@ ol.xq__order li { display: flex; justify-content: space-between; align-items: ce
 .gl__q { flex: 1 1 16rem; padding: var(--s-2) var(--s-3); font: inherit; font-size: var(--t-sm); color: var(--ink); background: var(--paper-raise); border: 1px solid var(--rule); border-radius: var(--radius); }
 .gl__letter { font-size: var(--t-lg) !important; margin: var(--s-5) 0 var(--s-2) !important; }
 .gl__t { border-bottom: 1px solid var(--rule); padding: var(--s-2) 0; }
-.gl__t > summary { cursor: pointer; display: flex; justify-content: space-between; gap: var(--s-3); align-items: baseline; }
+/* The source label drops below the term when both don't fit on one line (long
+   single-word terms such as DefaultAzureCredential on a phone), and stays
+   right-aligned there. A term longer than the whole row breaks inside the word. */
+.gl__t > summary { cursor: pointer; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-1) var(--s-3); align-items: baseline; }
+.gl__t > summary > strong { min-width: 0; overflow-wrap: break-word; }
 .gl__t > p { margin: var(--s-1) 0 var(--s-2) !important; color: var(--ink-soft); font-size: var(--t-sm); }
-.gl__src { font-family: var(--face-ui); font-size: var(--t-xs); color: var(--ink-faint); white-space: nowrap; }
+.gl__src { font-family: var(--face-ui); font-size: var(--t-xs); color: var(--ink-faint); margin-left: auto; }
 
 /* ---------------- visual kit ---------------- */
 .v { text-align: left; }

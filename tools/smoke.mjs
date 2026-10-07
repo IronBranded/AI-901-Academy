@@ -32,16 +32,36 @@ for (const r of routes) {
 }
 console.log(`Rendered ${routes.length} routes.`);
 
-/* Phone width: no page may scroll sideways (wide tables and code scroll inside their own boxes). */
-await page.setViewportSize({ width: 360, height: 800 });
-for (const r of routes) {
-  await page.goto(base + r);
-  await page.waitForTimeout(40);
-  const w = await page.evaluate(() => document.documentElement.scrollWidth);
-  if (w > 361) problems.push(`${r}: page scrolls sideways at 360px (${w}px wide)`);
+/* Phone width: no page may scroll sideways (wide tables and code scroll inside their own boxes).
+   320 CSS px is the WCAG 2.1 reflow width (1.4.10) and the narrowest common phone; no
+   breakpoint sits between 320 and 360, so passing here covers 360px phones as well.
+   Run twice: once with this machine's fonts, and once with a deliberately wide font
+   (Verdana on Windows/macOS, DejaVu Sans on Linux). Line breaks depend on glyph widths,
+   so a layout that fits with Segoe UI or Inter can still overflow with the wider
+   DejaVu Sans that GitHub's Ubuntu runners use. The second pass makes every machine
+   catch what CI catches, and it stands in for a reader who has set a wider font. */
+const WIDE_FONTS = ':root{--face-ui:Verdana,"DejaVu Sans",sans-serif !important;--face-body:Verdana,"DejaVu Sans",sans-serif !important;' +
+  '--face-display:Verdana,"DejaVu Sans",sans-serif !important;--face-serif:Georgia,"DejaVu Serif",serif !important;' +
+  '--face-mono:"Courier New","DejaVu Sans Mono",monospace !important}';
+const PHONE = 320;
+const phoneCtx = await browser.newContext({ viewport: { width: PHONE, height: 800 } });
+const phone = await phoneCtx.newPage();
+const wideCtx = await browser.newContext({ viewport: { width: PHONE, height: 800 } });
+await wideCtx.addInitScript(css => {
+  const add = () => { const s = document.createElement('style'); s.textContent = css; document.head.appendChild(s); };
+  document.head ? add() : document.addEventListener('DOMContentLoaded', add);
+}, WIDE_FONTS);
+const wide = await wideCtx.newPage();
+for (const [label, p] of [['', phone], [' with wide fonts', wide]]) {
+  for (const r of routes) {
+    await p.goto(base + r);
+    await p.waitForTimeout(40);
+    const w = await p.evaluate(() => document.documentElement.scrollWidth);
+    if (w > PHONE + 1) problems.push(`${r}: page scrolls sideways at ${PHONE}px${label} (${w}px wide)`);
+  }
 }
-await page.setViewportSize({ width: 1280, height: 900 });
-console.log(`Checked ${routes.length} routes at phone width.`);
+await phoneCtx.close(); await wideCtx.close();
+console.log(`Checked ${routes.length} routes at ${PHONE}px, with system and wide fonts.`);
 
 /* Flow 1: a foundation knowledge check, with one wrong answer */
 await page.goto(base + '#/f/00-01');
