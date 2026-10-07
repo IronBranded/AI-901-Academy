@@ -1,35 +1,58 @@
 # AI-901 Academy
 
-A single-page study guide for **Microsoft Exam AI-901: Microsoft Azure AI Fundamentals**, built against the skills outline dated **April 15, 2026**.
+A free, interactive study site for **Microsoft Exam AI-901: Microsoft Azure AI Fundamentals**, built against the skills measured as of **April 15, 2026**.
 
 <h3 align="center">
   <a href="https://ironbranded.github.io/AI-901-Academy/" target="_blank" rel="noopener noreferrer">
-    🟢 TRY THE ACADEMY🟢
+    🟢 TRY THE ACADEMY 🟢
   </a>
 </h3>
 
-## What is in it
+**Beginner-first in how it explains AI. Certification-first in what it teaches.** You do not need AI-900, a machine learning background or programming fluency to start. Every topic begins with a real problem, explains the idea in plain English, shows what goes in and what comes out, and only then names the Microsoft technology and the exam objective.
 
-| Area | Contents |
+## How the Academy is organised
+
+| Part | What it gives you |
 |---|---|
-| **Learn the concepts** | 8 pages, 49 units, following Microsoft's two AI-901 learning paths. Every unit has a diagram and defined key terms. |
-| **Glossary** | 177 terms, searchable, with a flashcard mode. Each term links to the unit that explains it. |
-| **Modules** | 9 exam-focused modules mapped to all 29 sub-objectives: mechanism, configuration, failure modes, exam phrasing, validation, sources. |
-| **Labs** | One per module, with tracked steps and mandatory teardown. Flows follow `MicrosoftLearning/mslearn-ai-fundamentals` and `mslearn-ai-concepts`. |
-| **Knowledge checks** | 43 questions, each tagged to an objective. |
-| **Practice exam** | 37 scenario questions: multiple choice, multiple response, Yes/No sets, code completion, ordering, and a case study. |
-| **Cost planner** | Labs ordered by cost, plus the traps that bill by the hour. |
-| **Readiness** | What to study next, ranked by exam weight and by what you actually got wrong. |
+| **Module 0: Before we build AI** | 17 short foundation lessons (00-01 to 00-17): what AI is, data and models, language, vision, speech, documents, generative AI, LLMs, applications, agents, APIs/SDKs/CLIs, a Python reading primer, Azure resources, responsible AI, and one end-to-end mental model. Each has a hands-on exploration that runs in the browser, a knowledge check and a Teach-it-back prompt. |
+| **Concepts** | 8 pages, 49 units, following Microsoft's two AI-901 learning paths, each unit with a diagram and its key terms. |
+| **Exam modules and labs** | 9 modules mapped to all 29 official sub-objectives, each with an AI-901 Exam Lens, scenario clues, a Microsoft translation, and a lab with tracked steps and teardown. |
+| **Objectives** | All 29 objectives in outline order, with your evidence per objective (Studied, Practiced, Knowledge checked, Applied, Retained, Needs review) and every lesson, comparison and question that covers it. |
+| **Comparisons** | 17 side-by-side tables for the things beginners confuse: classification vs regression, OCR vs field extraction, app vs agent, speech recognition vs synthesis, resource vs project and more. |
+| **Exam Prep** | Practise by objective, by concept area ("I keep confusing vision"), by Needs review, Review later, unanswered or previously wrong questions, or a mixed set. |
+| **Practice exam** | 37 original scenario questions in exam-style formats, including a case study. |
+| **Search** | Search by concept, acronym, Microsoft technology, objective, or by input type and output type (for example: input *image*, output *text*). Press <kbd>Ctrl</kbd>+<kbd>K</kbd> anywhere. |
+| **Review** | What needs review and what you saved for later, each linked to the lesson and comparison that fixes it. |
+
+Every knowledge-check answer explains the **correct answer**, **why**, **why not the others**, the **scenario clue**, the **objective** it tests and, where useful, the **misconception** it targets. All questions are original; none come from exam dumps or recalled exam content.
 
 ## Progress
 
-Progress is saved in your browser's local storage, per browser and per URL. Opening the file from disk and from GitHub Pages gives two separate progress records. Clearing site data clears progress.
+Progress is stored only in your browser (local storage), separately for each site address: the file opened from disk and the GitHub Pages site keep separate records. Use **Export progress** on the dashboard to keep a copy. Reading a page never counts as mastery: objectives are marked from your answers and exercises, and the site never predicts a pass score.
 
-## Caveats
+## Accuracy and sources
 
-- Explanations are written for this guide, following the same syllabus as the Microsoft Learn modules linked on each page. Read those too.
-- Modules 01-01, 01-02 and 02-04 are marked **Not yet verified** in the page: written from product documentation, not yet run against a Microsoft exercise. Check CLI flags and model names before relying on them.
-- The practice exam's format mix is an approximation; Microsoft does not publish it. A score of 700 on the real exam is scaled and is not 70% correct.
-- Foundry, its SDKs and model names change often. The authority is always the [official study guide](https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901).
+- Objective text is stored verbatim from the [official study guide](https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901) in one file, [`assets/js/content/objectives.js`](assets/js/content/objectives.js). A weekly GitHub Action compares it with the live study guide and opens an issue when Microsoft changes the outline.
+- Microsoft product claims were checked against Microsoft Learn documentation; each objective records the pages it was checked against.
+- Modules **01-01**, **01-02** and **02-04** are marked *Not yet verified* in the page: written from product documentation, not yet run against a Microsoft exercise.
+- Known documentation discrepancies are shown to learners where they matter and listed in [`docs/CONTENT-REVIEW.md`](docs/CONTENT-REVIEW.md).
+- Foundry, its SDKs and model names change often. The authority is always Microsoft Learn.
 
 Not affiliated with or endorsed by Microsoft.
+
+## For contributors
+
+The site is plain HTML, CSS and JavaScript served by GitHub Pages from the repository root. There is no build server; Node.js is only used for the development checks.
+
+```powershell
+npm install                       # tooling only: Playwright and axe-core
+npx playwright install chromium   # browser for the smoke and accessibility tests
+npm run build                     # rebuild assets/js/app.js after editing assets/js/app/*.js
+npm test                          # build check, content validation, smoke test, accessibility
+npm run check:objectives          # compare objectives.js with the live study guide
+```
+
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): how the files fit together, routes and progress storage.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md): lesson anatomy, writing rules, adding questions, and what to do when the exam changes.
+- [`docs/coverage-matrix.md`](docs/coverage-matrix.md): objective → lesson → exercise → check, generated by `npm run validate`.
+- [`docs/ACCESSIBILITY.md`](docs/ACCESSIBILITY.md): what is tested automatically and what to test by hand.

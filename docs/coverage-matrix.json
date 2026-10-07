@@ -1,0 +1,1256 @@
+{
+  "exam": "AI-901",
+  "outline": "April 15, 2026",
+  "lastChecked": "2026-10-06",
+  "objectives": [
+    {
+      "id": "1.1.1",
+      "objective": "Describe considerations for fairness in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Reasoned about at design time and tested with evaluations; Foundry's safety evaluators can scan outputs for bias and unfairness.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:0",
+          "f:00-16:0"
+        ],
+        "exam": [
+          "x03"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai"
+      ]
+    },
+    {
+      "id": "1.1.2",
+      "objective": "Describe considerations for reliability and safety in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16",
+        "00-03"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Foundry guardrails (powered by Azure AI Content Safety) scan user input and model output for harm categories at a configurable severity threshold.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [
+          "01-01"
+        ],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:1",
+          "f:00-03:2",
+          "f:00-08:2"
+        ],
+        "exam": [
+          "x01",
+          "x04"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 01-01 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai",
+        "https://learn.microsoft.com/azure/foundry/guardrails/guardrails-overview"
+      ]
+    },
+    {
+      "id": "1.1.3",
+      "objective": "Describe considerations for privacy and security in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16",
+        "00-05"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Microsoft Entra ID and role-based access control on the Foundry resource; personal data detection (PII) in Azure Language; data deleted when no longer needed.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:2",
+          "f:00-05:1",
+          "f:00-11:2"
+        ],
+        "exam": []
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai"
+      ]
+    },
+    {
+      "id": "1.1.4",
+      "objective": "Describe considerations for inclusiveness in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16",
+        "00-07"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Speech in Foundry Tools can caption spoken output and voice text output; multimodal models accept text, images and audio.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:3",
+          "f:00-16:2"
+        ],
+        "exam": [
+          "x01"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai"
+      ]
+    },
+    {
+      "id": "1.1.5",
+      "objective": "Describe considerations for transparency in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Model cards and transparency notes in the Foundry catalog; citations in grounded agent responses; Content Credentials on generated images.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:4",
+          "f:00-16:1",
+          "f:00-17:2"
+        ],
+        "exam": [
+          "x01",
+          "c04"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai"
+      ]
+    },
+    {
+      "id": "1.1.6",
+      "objective": "Describe considerations for accountability in an AI solution",
+      "domain": "01",
+      "group": "1.1 Describe principles of responsible AI",
+      "area": "rai",
+      "foundations": [
+        "00-16"
+      ],
+      "concepts": [
+        "L1"
+      ],
+      "module": "01-01",
+      "microsoft": "Governance applied through Azure RBAC, Azure Policy and the Foundry control plane, with tracing and evaluation records of what agents did.",
+      "comparisons": [
+        "rai-neighbours"
+      ],
+      "exercise": {
+        "labs": [],
+        "explorations": [
+          "00-16"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-01:5",
+          "m:01-01:6"
+        ],
+        "exam": [
+          "x02"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/7-responsible-ai"
+      ]
+    },
+    {
+      "id": "1.2.1",
+      "objective": "Describe how generative AI models work",
+      "domain": "01",
+      "group": "1.2 Identify AI model components and configurations",
+      "area": "genai",
+      "foundations": [
+        "00-03",
+        "00-09",
+        "00-10"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "01-02",
+      "microsoft": "Foundry Models catalog: language, reasoning, multimodal, embedding and image-generation models, called through the Responses API.",
+      "comparisons": [
+        "predictive-vs-generative"
+      ],
+      "exercise": {
+        "labs": [
+          "01-02"
+        ],
+        "explorations": [
+          "00-09",
+          "00-10"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-02:0",
+          "f:00-02:2",
+          "f:00-03:1",
+          "f:00-09:1"
+        ],
+        "exam": [
+          "x05",
+          "x06"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 01-02 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/fundamentals-generative-ai/3-language-models",
+        "https://learn.microsoft.com/training/modules/fundamentals-generative-ai/"
+      ]
+    },
+    {
+      "id": "1.2.2",
+      "objective": "Identify an appropriate AI model, based on capabilities",
+      "domain": "01",
+      "group": "1.2 Identify AI model components and configurations",
+      "area": "models",
+      "foundations": [
+        "00-09",
+        "00-10"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "01-02",
+      "microsoft": "Foundry model catalog with capabilities, benchmarks, leaderboards and model cards; Foundry Tools for well-defined tasks.",
+      "comparisons": [
+        "tool-vs-model"
+      ],
+      "exercise": {
+        "labs": [
+          "01-02"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:01-02:1",
+          "m:01-02:2",
+          "m:01-02:5"
+        ],
+        "exam": [
+          "x08"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 01-02 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/"
+      ]
+    },
+    {
+      "id": "1.2.3",
+      "objective": "Identify appropriate model deployment options and configuration parameters",
+      "domain": "01",
+      "group": "1.2 Identify AI model components and configurations",
+      "area": "models",
+      "foundations": [
+        "00-10",
+        "00-15"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "01-02",
+      "microsoft": "Deployment type, model version and TPM limit chosen at deployment; parameters set in the playground or in code.",
+      "comparisons": [
+        "deployment-types"
+      ],
+      "exercise": {
+        "labs": [
+          "01-02"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:01-02:3",
+          "m:01-02:4",
+          "f:00-09:2",
+          "f:00-13:1",
+          "f:00-15:2"
+        ],
+        "exam": [
+          "x07",
+          "x09",
+          "c02"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 01-02 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/azure/foundry/foundry-models/concepts/deployment-types",
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/"
+      ]
+    },
+    {
+      "id": "1.3.1",
+      "objective": "Identify scenarios for common AI workloads, including generative and agentic AI, text analysis, speech, computer vision, and information extraction",
+      "domain": "01",
+      "group": "1.3 Identify AI workloads",
+      "area": "workloads",
+      "foundations": [
+        "00-01",
+        "00-05",
+        "00-06",
+        "00-07",
+        "00-08",
+        "00-09",
+        "00-12",
+        "00-17"
+      ],
+      "concepts": [
+        "L1",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "module": "01-03",
+      "microsoft": "Foundry Models and agents for generative and agentic AI; Azure Language, Azure Speech, Azure Vision and Azure Content Understanding in Foundry Tools for the others.",
+      "comparisons": [
+        "app-vs-agent",
+        "extract-vs-generate",
+        "predictive-vs-generative"
+      ],
+      "exercise": {
+        "labs": [
+          "01-03"
+        ],
+        "explorations": [
+          "00-17"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-03:4",
+          "f:00-01:0",
+          "f:00-09:0",
+          "f:00-12:0",
+          "f:00-17:0",
+          "f:00-17:1"
+        ],
+        "exam": [
+          "x14"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-ai-fundamentals/"
+      ]
+    },
+    {
+      "id": "1.3.2",
+      "objective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+      "domain": "01",
+      "group": "1.3 Identify AI workloads",
+      "area": "language",
+      "foundations": [
+        "00-05"
+      ],
+      "concepts": [
+        "L1",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "module": "01-03",
+      "microsoft": "Azure Language in Foundry Tools, or a general-purpose language model when predictability is less important.",
+      "comparisons": [
+        "text-techniques"
+      ],
+      "exercise": {
+        "labs": [
+          "01-03"
+        ],
+        "explorations": [
+          "00-05"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-03:1",
+          "f:00-04:2",
+          "f:00-05:0"
+        ],
+        "exam": [
+          "x11",
+          "x12"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/introduction-language/"
+      ]
+    },
+    {
+      "id": "1.3.3",
+      "objective": "Identify features and capabilities of speech recognition and speech synthesis",
+      "domain": "01",
+      "group": "1.3 Identify AI workloads",
+      "area": "speech",
+      "foundations": [
+        "00-07"
+      ],
+      "concepts": [
+        "L1",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "module": "01-03",
+      "microsoft": "Azure Speech in Foundry Tools: speech to text, text to speech, speech translation; audio-capable models in Foundry Models.",
+      "comparisons": [
+        "stt-vs-tts"
+      ],
+      "exercise": {
+        "labs": [
+          "01-03"
+        ],
+        "explorations": [
+          "00-07"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-03:2",
+          "m:01-03:5",
+          "f:00-07:0"
+        ],
+        "exam": [
+          "x13"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/introduction-ai-speech/"
+      ]
+    },
+    {
+      "id": "1.3.4",
+      "objective": "Identify features and capabilities of computer vision and image-generation models",
+      "domain": "01",
+      "group": "1.3 Identify AI workloads",
+      "area": "vision",
+      "foundations": [
+        "00-06"
+      ],
+      "concepts": [
+        "L1",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "module": "01-03",
+      "microsoft": "Multimodal and image-generation models in Foundry Models; Azure Vision in Foundry Tools.",
+      "comparisons": [
+        "vision-tasks",
+        "analyze-vs-generate-image"
+      ],
+      "exercise": {
+        "labs": [
+          "01-03"
+        ],
+        "explorations": [
+          "00-06"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-03:0",
+          "f:00-06:0",
+          "f:00-06:1"
+        ],
+        "exam": [
+          "x10"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/introduction-computer-vision/"
+      ]
+    },
+    {
+      "id": "1.3.5",
+      "objective": "Identify techniques to extract information from text, images, audio, and videos",
+      "domain": "01",
+      "group": "1.3 Identify AI workloads",
+      "area": "extract",
+      "foundations": [
+        "00-08"
+      ],
+      "concepts": [
+        "L1",
+        "L4",
+        "L5",
+        "L6",
+        "L7"
+      ],
+      "module": "01-03",
+      "microsoft": "Azure Content Understanding in Foundry Tools turns documents, images, audio and video into schema-defined fields with confidence and grounding.",
+      "comparisons": [
+        "ocr-vs-fields",
+        "extract-vs-generate"
+      ],
+      "exercise": {
+        "labs": [
+          "01-03"
+        ],
+        "explorations": [
+          "00-08"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:01-03:3",
+          "f:00-08:0",
+          "f:00-08:1"
+        ],
+        "exam": [
+          "x15"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/introduction-information-extraction/",
+        "https://learn.microsoft.com/azure/ai-services/content-understanding/overview"
+      ]
+    },
+    {
+      "id": "2.1.1",
+      "objective": "Create effective system and user prompts for generative AI models",
+      "domain": "02",
+      "group": "2.1 Implement generative AI apps and agents by using Foundry",
+      "area": "genai",
+      "foundations": [
+        "00-10"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "02-01",
+      "microsoft": "System instructions and user input in the Foundry playground, or instructions and input in a Responses API call.",
+      "comparisons": [
+        "prompt-parts",
+        "context-vs-grounding"
+      ],
+      "exercise": {
+        "labs": [
+          "02-01"
+        ],
+        "explorations": [
+          "00-10"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:02-01:0",
+          "f:00-10:0",
+          "f:00-10:1"
+        ],
+        "exam": [
+          "x17"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/fundamentals-generative-ai/6-writing-prompts"
+      ]
+    },
+    {
+      "id": "2.1.2",
+      "objective": "Deploy a model and interact with it in the Foundry portal",
+      "domain": "02",
+      "group": "2.1 Implement generative AI apps and agents by using Foundry",
+      "area": "foundry",
+      "foundations": [
+        "00-11",
+        "00-15"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "02-01",
+      "microsoft": "Foundry portal: model catalog, deploy, playground (system instructions, temperature, max output tokens), view code.",
+      "comparisons": [
+        "resource-vs-project"
+      ],
+      "exercise": {
+        "labs": [
+          "02-01"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-01:1",
+          "f:00-11:0",
+          "f:00-15:0"
+        ],
+        "exam": [
+          "x19"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-with-ai-in-azure/",
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/"
+      ]
+    },
+    {
+      "id": "2.1.3",
+      "objective": "Create a lightweight chat client application by using the Foundry SDK",
+      "domain": "02",
+      "group": "2.1 Implement generative AI apps and agents by using Foundry",
+      "area": "foundry",
+      "foundations": [
+        "00-11",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L2",
+        "L3"
+      ],
+      "module": "02-01",
+      "microsoft": "azure-ai-projects (AIProjectClient) with azure-identity (DefaultAzureCredential), then get_openai_client() and responses.create().",
+      "comparisons": [
+        "api-sdk-cli"
+      ],
+      "exercise": {
+        "labs": [
+          "02-01"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-01:2",
+          "m:02-01:3",
+          "m:02-01:4",
+          "f:00-10:2",
+          "f:00-11:1",
+          "f:00-13:0",
+          "f:00-13:2",
+          "f:00-14:0",
+          "f:00-14:1",
+          "f:00-14:2"
+        ],
+        "exam": [
+          "x16",
+          "x18"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/",
+        "https://learn.microsoft.com/azure/foundry/how-to/develop/sdk-overview"
+      ]
+    },
+    {
+      "id": "2.1.4",
+      "objective": "Create and test a single-agent solution in the Foundry portal",
+      "domain": "02",
+      "group": "2.1 Implement generative AI apps and agents by using Foundry",
+      "area": "agents",
+      "foundations": [
+        "00-12"
+      ],
+      "concepts": [
+        "L3",
+        "L8"
+      ],
+      "module": "02-02",
+      "microsoft": "Foundry Agent Service prompt agents, created in the Foundry portal with a model, instructions, tools and knowledge.",
+      "comparisons": [
+        "app-vs-agent",
+        "context-vs-grounding"
+      ],
+      "exercise": {
+        "labs": [
+          "02-02"
+        ],
+        "explorations": [
+          "00-12"
+        ]
+      },
+      "questions": {
+        "checks": [
+          "m:02-02:0",
+          "m:02-02:1",
+          "m:02-02:2",
+          "f:00-12:1",
+          "f:00-12:2"
+        ],
+        "exam": [
+          "x20",
+          "x21",
+          "c01"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/",
+        "https://learn.microsoft.com/azure/foundry/agents/overview"
+      ]
+    },
+    {
+      "id": "2.1.5",
+      "objective": "Create a lightweight client application for an agent",
+      "domain": "02",
+      "group": "2.1 Implement generative AI apps and agents by using Foundry",
+      "area": "agents",
+      "foundations": [
+        "00-12",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L3",
+        "L8"
+      ],
+      "module": "02-02",
+      "microsoft": "AIProjectClient.agents.get(), then responses.create() with an agent reference; Microsoft Entra ID via DefaultAzureCredential.",
+      "comparisons": [
+        "app-vs-agent"
+      ],
+      "exercise": {
+        "labs": [
+          "02-02"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-02:3",
+          "m:02-02:4",
+          "m:02-02:5"
+        ],
+        "exam": [
+          "x22",
+          "x23",
+          "c04"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/"
+      ]
+    },
+    {
+      "id": "2.2.1",
+      "objective": "Build a lightweight application that includes text analysis",
+      "domain": "02",
+      "group": "2.2 Implement AI solutions for text and speech by using Foundry",
+      "area": "language",
+      "foundations": [
+        "00-05",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L4",
+        "L5"
+      ],
+      "module": "02-03",
+      "microsoft": "Azure Language in Foundry Tools via its client library or REST API; or a prompt to a deployed language model.",
+      "comparisons": [
+        "tool-vs-model",
+        "text-techniques"
+      ],
+      "exercise": {
+        "labs": [
+          "02-03"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-03:0",
+          "m:02-03:5",
+          "f:00-05:2"
+        ],
+        "exam": [
+          "x24",
+          "c04"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/"
+      ]
+    },
+    {
+      "id": "2.2.2",
+      "objective": "Respond to spoken prompts by using a deployed multimodal model",
+      "domain": "02",
+      "group": "2.2 Implement AI solutions for text and speech by using Foundry",
+      "area": "speech",
+      "foundations": [
+        "00-07",
+        "00-10"
+      ],
+      "concepts": [
+        "L4",
+        "L5"
+      ],
+      "module": "02-03",
+      "microsoft": "Audio-capable models in Foundry Models; voice-based agents connected through Voice Live.",
+      "comparisons": [
+        "stt-vs-tts"
+      ],
+      "exercise": {
+        "labs": [
+          "02-03"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-03:1",
+          "m:02-03:4",
+          "f:00-07:2"
+        ],
+        "exam": [
+          "x26",
+          "c05"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-speech-azure/"
+      ]
+    },
+    {
+      "id": "2.2.3",
+      "objective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+      "domain": "02",
+      "group": "2.2 Implement AI solutions for text and speech by using Foundry",
+      "area": "speech",
+      "foundations": [
+        "00-07",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L4",
+        "L5"
+      ],
+      "module": "02-03",
+      "microsoft": "Azure Speech in Foundry Tools: SpeechRecognizer and SpeechSynthesizer in the Speech SDK.",
+      "comparisons": [
+        "stt-vs-tts"
+      ],
+      "exercise": {
+        "labs": [
+          "02-03"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-03:2",
+          "m:02-03:3",
+          "f:00-07:1"
+        ],
+        "exam": [
+          "x25"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-speech-azure/"
+      ]
+    },
+    {
+      "id": "2.3.1",
+      "objective": "Interpret visual input in prompts by using a deployed multimodal model",
+      "domain": "02",
+      "group": "2.3 Implement AI solutions with computer vision and image-generation capabilities by using Foundry",
+      "area": "vision",
+      "foundations": [
+        "00-06",
+        "00-10"
+      ],
+      "concepts": [
+        "L6"
+      ],
+      "module": "02-04",
+      "microsoft": "A multimodal model deployment called through the Responses API with text and image content parts.",
+      "comparisons": [
+        "analyze-vs-generate-image",
+        "vision-tasks"
+      ],
+      "exercise": {
+        "labs": [
+          "02-04"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-04:0",
+          "m:02-04:4"
+        ],
+        "exam": [
+          "x27"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 02-04 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-vision-azure/"
+      ]
+    },
+    {
+      "id": "2.3.2",
+      "objective": "Create new visual outputs by using generative models",
+      "domain": "02",
+      "group": "2.3 Implement AI solutions with computer vision and image-generation capabilities by using Foundry",
+      "area": "vision",
+      "foundations": [
+        "00-06",
+        "00-09"
+      ],
+      "concepts": [
+        "L6"
+      ],
+      "module": "02-04",
+      "microsoft": "Image-generation models in Foundry Models, used from the portal playground or code.",
+      "comparisons": [
+        "analyze-vs-generate-image"
+      ],
+      "exercise": {
+        "labs": [
+          "02-04"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-04:2",
+          "m:02-04:3",
+          "f:00-06:2"
+        ],
+        "exam": [
+          "x27",
+          "x28"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 02-04 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-vision-azure/"
+      ]
+    },
+    {
+      "id": "2.3.3",
+      "objective": "Build a lightweight application that includes vision capabilities",
+      "domain": "02",
+      "group": "2.3 Implement AI solutions with computer vision and image-generation capabilities by using Foundry",
+      "area": "vision",
+      "foundations": [
+        "00-06",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L6"
+      ],
+      "module": "02-04",
+      "microsoft": "Foundry SDK with a multimodal or image-generation deployment; Azure Vision in Foundry Tools for prebuilt analysis.",
+      "comparisons": [
+        "vision-tasks"
+      ],
+      "exercise": {
+        "labs": [
+          "02-04"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-04:1",
+          "m:02-04:5"
+        ],
+        "exam": [
+          "x27"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": "Lab 02-04 not yet verified against a Microsoft exercise",
+      "sources": [
+        "https://learn.microsoft.com/training/modules/get-started-vision-azure/"
+      ]
+    },
+    {
+      "id": "2.4.1",
+      "objective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+      "domain": "02",
+      "group": "2.4 Implement AI solutions for information extraction by using Foundry",
+      "area": "extract",
+      "foundations": [
+        "00-08"
+      ],
+      "concepts": [
+        "L7"
+      ],
+      "module": "02-05",
+      "microsoft": "Azure Content Understanding analyzers for documents, with schema-defined fields.",
+      "comparisons": [
+        "ocr-vs-fields",
+        "extract-vs-generate"
+      ],
+      "exercise": {
+        "labs": [
+          "02-05"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-05:0",
+          "m:02-05:1"
+        ],
+        "exam": [
+          "x29",
+          "c03"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/azure/ai-services/content-understanding/overview",
+        "https://learn.microsoft.com/training/modules/get-started-information-extraction/"
+      ]
+    },
+    {
+      "id": "2.4.2",
+      "objective": "Extract information from images by using Content Understanding",
+      "domain": "02",
+      "group": "2.4 Implement AI solutions for information extraction by using Foundry",
+      "area": "extract",
+      "foundations": [
+        "00-06",
+        "00-08"
+      ],
+      "concepts": [
+        "L7"
+      ],
+      "module": "02-05",
+      "microsoft": "Azure Content Understanding image analysis.",
+      "comparisons": [
+        "ocr-vs-fields"
+      ],
+      "exercise": {
+        "labs": [
+          "02-05"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-05:2",
+          "m:02-05:5"
+        ],
+        "exam": []
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/azure/ai-services/content-understanding/overview"
+      ]
+    },
+    {
+      "id": "2.4.3",
+      "objective": "Extract information from audio and video by using Content Understanding",
+      "domain": "02",
+      "group": "2.4 Implement AI solutions for information extraction by using Foundry",
+      "area": "extract",
+      "foundations": [
+        "00-07",
+        "00-08"
+      ],
+      "concepts": [
+        "L7"
+      ],
+      "module": "02-05",
+      "microsoft": "Azure Content Understanding audio and video analyzers.",
+      "comparisons": [
+        "ocr-vs-fields"
+      ],
+      "exercise": {
+        "labs": [
+          "02-05"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-05:3",
+          "m:02-05:6"
+        ],
+        "exam": [
+          "x31"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/azure/ai-services/content-understanding/overview"
+      ]
+    },
+    {
+      "id": "2.4.4",
+      "objective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+      "domain": "02",
+      "group": "2.4 Implement AI solutions for information extraction by using Foundry",
+      "area": "extract",
+      "foundations": [
+        "00-08",
+        "00-13",
+        "00-14"
+      ],
+      "concepts": [
+        "L7"
+      ],
+      "module": "02-05",
+      "microsoft": "Content Understanding client library or REST API: begin analysis, poll, read fields.",
+      "comparisons": [
+        "api-sdk-cli"
+      ],
+      "exercise": {
+        "labs": [
+          "02-05"
+        ],
+        "explorations": []
+      },
+      "questions": {
+        "checks": [
+          "m:02-05:4",
+          "m:02-05:7"
+        ],
+        "exam": [
+          "x30",
+          "x32"
+        ]
+      },
+      "status": "Covered",
+      "needsReview": null,
+      "sources": [
+        "https://learn.microsoft.com/azure/ai-services/content-understanding/overview",
+        "https://learn.microsoft.com/training/modules/get-started-information-extraction/"
+      ]
+    }
+  ]
+}

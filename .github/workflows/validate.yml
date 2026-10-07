@@ -1,0 +1,44 @@
+# Runs the Academy's checks on every push and pull request:
+# app.js is rebuilt from its parts, content and objective mappings validate,
+# every page renders without errors, and axe-core finds no serious accessibility issues.
+# GitHub Pages publishes the repository root as-is; this workflow only guards it.
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install tooling
+        run: npm ci
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: app.js is up to date
+        run: node tools/build.mjs --check
+
+      - name: Content and objective coverage
+        run: node tools/validate.mjs --no-write
+
+      - name: Every route renders (smoke test)
+        run: node tools/smoke.mjs
+
+      - name: Accessibility (axe-core, WCAG 2.1 A/AA)
+        run: node tools/a11y.mjs
